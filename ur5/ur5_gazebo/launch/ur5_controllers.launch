@@ -11,9 +11,9 @@
             command="load" />
 
   <!-- Load controllers -->
-  <node name="robot_controllers" pkg="controller_manager" type="spawner"
+  <node name="robot_controllers" pkg="controller_manager" type="controller_manager"
         output="$(arg DEBUG)"
-        args="joint_state_controller trajectory_controller gripper_controller"/>
+        args="spawn joint_state_controller trajectory_controller gripper_controller"/>
 
   <!-- TF -->
   <node pkg="robot_state_publisher" type="robot_state_publisher"
